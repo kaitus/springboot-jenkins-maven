@@ -11,6 +11,7 @@ node {
         sh "mvn clean package"
     }
     stage('Build docker image') {
-        sh 'sudo docker build -t carldihe/api-rest:0.0.1-SNAPSHOT .'
+        sh 'service docker start'
+        sh 'docker build -t carldihe/api-rest:0.0.1-SNAPSHOT .'
     }
 }
