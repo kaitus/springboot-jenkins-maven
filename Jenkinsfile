@@ -9,6 +9,7 @@ node {
     }
     stage('Build docker image') {
         def dockerHome = tool name: 'docker', type: 'dockerTool'
-        sh 'docker build -t carldihe/api-rest:0.0.1-SNAPSHOT .'
+        def dockerCMD = "${dockerHome}/docker"
+        sh '${dockerCMD} -t carldihe/api-rest:0.0.1-SNAPSHOT .'
     }
 }
