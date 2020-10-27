@@ -7,4 +7,8 @@ node {
         def mvnCMD = "${mvnHome}/bin/mvn"
         sh "${mvnCMD} clean package"
     }
+    stage('Mvc Package') {
+        sh 'docker build -t carldihe/api-rest:0.0.1-SNAPSHOT .'
+
+    }
 }
