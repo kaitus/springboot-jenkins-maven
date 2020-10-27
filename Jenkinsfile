@@ -12,6 +12,6 @@ node {
     }
     stage('Build docker image') {
         sh 'docker --version'
-        //sh 'docker build -t carldihe/api-rest:0.0.1-SNAPSHOT .'
+        sh 'docker build -t carldihe/api-rest:dockerfile1 .'
     }
 }
