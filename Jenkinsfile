@@ -13,7 +13,7 @@ node {
     }
     stage('Build docker image') {
         def dockerHome = tool name: 'docker', type: 'dockerTool'
-        def dockerCMD = "${dockerHome}/docker"
+        def dockerCMD = "${dockerHome}\docker"
         bat "${dockerCMD} --version"
         //bat 'docker-compose up'
         //sh 'docker logs 05bf5a2ae0c9'
